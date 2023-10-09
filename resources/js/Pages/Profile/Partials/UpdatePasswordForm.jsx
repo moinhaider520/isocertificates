@@ -47,55 +47,50 @@ export default function UpdatePasswordForm({ className = '' }) {
             </header>
 
             <form onSubmit={updatePassword} className="mt-6 space-y-6">
-                <div>
-                    <InputLabel htmlFor="current_password" value="Current Password" />
-
-                    <TextInput
+            <div className="form-group">
+                      <input
+                        className="form-control"
                         id="current_password"
                         ref={currentPasswordInput}
                         value={data.current_password}
                         onChange={(e) => setData('current_password', e.target.value)}
                         type="password"
-                        className="mt-1 block w-full"
+                        placeholder='Current Password'
                         autoComplete="current-password"
-                    />
+                      />
+                                          <InputError message={errors.current_password} className="mt-2" />
+                    </div>
 
-                    <InputError message={errors.current_password} className="mt-2" />
-                </div>
-
-                <div>
-                    <InputLabel htmlFor="password" value="New Password" />
-
-                    <TextInput
+                    <div className="form-group">
+                      <input
+                        className="form-control"
                         id="password"
                         ref={passwordInput}
                         value={data.password}
                         onChange={(e) => setData('password', e.target.value)}
                         type="password"
-                        className="mt-1 block w-full"
+                        placeholder='New Password'
                         autoComplete="new-password"
-                    />
-
+                      />
                     <InputError message={errors.password} className="mt-2" />
-                </div>
+                    </div>
 
-                <div>
-                    <InputLabel htmlFor="password_confirmation" value="Confirm Password" />
-
-                    <TextInput
+                    <div className="form-group">
+                      <input
+                        className="form-control"
                         id="password_confirmation"
                         value={data.password_confirmation}
                         onChange={(e) => setData('password_confirmation', e.target.value)}
                         type="password"
-                        className="mt-1 block w-full"
                         autoComplete="new-password"
-                    />
-
+                        placeholder='Confirm Password'
+                      />
                     <InputError message={errors.password_confirmation} className="mt-2" />
-                </div>
+                    </div>
+
 
                 <div className="flex items-center gap-4">
-                    <PrimaryButton disabled={processing}>Save</PrimaryButton>
+                    <PrimaryButton className="btn btn-primary" disabled={processing}>Save</PrimaryButton>
 
                     <Transition
                         show={recentlySuccessful}

@@ -42,9 +42,6 @@ export default function Login({ status, canResetPassword }) {
                         
                         <div class="form-group">
                             <label for="signin-email" class="control-label sr-only">Email</label>
-
-
-
                             <input id="signin-email"
                                 type="email"
                                 name="email"

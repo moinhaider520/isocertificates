@@ -1,3 +1,4 @@
+import { Link } from "@inertiajs/react";
 import React from "react";
 
 export default function LeftSideBar() {
@@ -24,10 +25,10 @@ export default function LeftSideBar() {
           </a>
           <ul className="dropdown-menu dropdown-menu-right account">
             <li>
-              <a href="page-profile2.html">
+              <Link href={route('profile.edit')}>
                 <i className="icon-user" />
                 My Profile
-              </a>
+              </Link>
             </li>
             <li>
               <a href="app-inbox.html">

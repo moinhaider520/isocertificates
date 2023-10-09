@@ -26,34 +26,34 @@ export default function ConfirmPassword() {
     return (
         <GuestLayout>
             <Head title="Confirm Password" />
-
-            <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                This is a secure area of the application. Please confirm your password before continuing.
+            <div class="card">
+            <div class="header">
+                    <p class="lead">This is a secure area of the application. Please confirm your password before continuing.</p>
             </div>
-
+            <div class="body">
             <form onSubmit={submit}>
-                <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
-
-                    <TextInput
-                        id="password"
-                        type="password"
-                        name="password"
-                        value={data.password}
-                        className="mt-1 block w-full"
-                        isFocused={true}
-                        onChange={(e) => setData('password', e.target.value)}
-                    />
-
-                    <InputError message={errors.password} className="mt-2" />
-                </div>
-
+            <div class="form-group">
+                            <label for="password" class="control-label sr-only">Password</label>
+                            <input id="password"
+                                type="password"
+                                name="password"
+                                value={data.password}
+                                class="form-control"
+                                autoComplete="password"
+                                placeholder="Your password"
+                                isFocused={true}
+                                required
+                                onChange={(e) => setData('password', e.target.value)} />
+                                <InputError message={errors.password} className="mt-2" />
+                        </div>
                 <div className="flex items-center justify-end mt-4">
-                    <PrimaryButton className="ml-4" disabled={processing}>
+                    <PrimaryButton className="btn btn-primary btn-lg btn-block" disabled={processing}>
                         Confirm
                     </PrimaryButton>
                 </div>
             </form>
+            </div>
+            </div>
         </GuestLayout>
     );
 }

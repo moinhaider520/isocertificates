@@ -20,7 +20,7 @@
     
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts -->
     @routes
@@ -31,7 +31,6 @@
 
 <body data-theme="light" class="font-nunito">
     @inertia
-   
 </body>
 
 </html>

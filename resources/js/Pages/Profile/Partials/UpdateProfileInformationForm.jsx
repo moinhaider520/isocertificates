@@ -30,37 +30,31 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
             </header>
 
             <form onSubmit={submit} className="mt-6 space-y-6">
-                <div>
-                    <InputLabel htmlFor="name" value="Name" />
-
-                    <TextInput
-                        id="name"
-                        className="mt-1 block w-full"
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
                         value={data.name}
                         onChange={(e) => setData('name', e.target.value)}
                         required
                         isFocused
                         autoComplete="name"
-                    />
-
+                      />
                     <InputError className="mt-2" message={errors.name} />
-                </div>
+                    </div>
 
-                <div>
-                    <InputLabel htmlFor="email" value="Email" />
-
-                    <TextInput
-                        id="email"
-                        type="email"
-                        className="mt-1 block w-full"
+            <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
                         value={data.email}
                         onChange={(e) => setData('email', e.target.value)}
                         required
+                        isFocused
                         autoComplete="username"
-                    />
-
+                      />
                     <InputError className="mt-2" message={errors.email} />
-                </div>
+                    </div>
 
                 {mustVerifyEmail && user.email_verified_at === null && (
                     <div>
@@ -85,7 +79,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                 )}
 
                 <div className="flex items-center gap-4">
-                    <PrimaryButton disabled={processing}>Save</PrimaryButton>
+                    <PrimaryButton className="btn btn-primary" disabled={processing}>Save</PrimaryButton>
 
                     <Transition
                         show={recentlySuccessful}

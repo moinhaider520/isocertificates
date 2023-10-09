@@ -13,7 +13,6 @@ function Footer() {
             '/assets/bundles/c3.bundle.js',
             '/assets/bundles/mainscripts.bundle.js',
             '/assets/js/index.js'
-            // Add more script URLs as needed
         ];
 
         // Load scripts in sequence
@@ -42,7 +41,7 @@ function Footer() {
         loadScript(0);
     };
 
-    return null; // The component doesn't render anything
+    return null;
 }
 
 export default Footer;
