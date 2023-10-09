@@ -110,23 +110,20 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
                 </div>
               </div>
               <div className="body">
-                <div className="row">
+              <h6>Profile Information</h6>
               <UpdateProfileInformationForm
                             mustVerifyEmail={mustVerifyEmail}
                             status={status}
                             className="max-w-xl"
                         />
                         </div>
-                        </div>
               <div className="body">
-                <div className="row clearfix">
+              <h6>Update Password</h6>
                     <UpdatePasswordForm className="max-w-xl" />
-                  </div>
               </div>
               <div className="body">
-                <div className="row">
+                <h6>Delete Account</h6>
                 <DeleteUserForm className="max-w-xl" />
-                </div>
               </div>
             </div>
 

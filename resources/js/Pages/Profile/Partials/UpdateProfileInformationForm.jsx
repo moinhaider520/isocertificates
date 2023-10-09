@@ -20,16 +20,9 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
     };
 
     return (
-        <section className={className}>
-            <header>
-                <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100">Profile Information</h2>
-
-                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                    Update your account's profile information and email address.
-                </p>
-            </header>
-
             <form onSubmit={submit} className="mt-6 space-y-6">
+                <div className="row clearfix">
+                <div className="col-lg-6 col-md-12">
                     <div className="form-group">
                       <input
                         type="text"
@@ -42,7 +35,8 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                       />
                     <InputError className="mt-2" message={errors.name} />
                     </div>
-
+                </div>
+                <div className="col-lg-6 col-md-12">
             <div className="form-group">
                       <input
                         type="text"
@@ -55,7 +49,8 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                       />
                     <InputError className="mt-2" message={errors.email} />
                     </div>
-
+                    </div>
+                    </div>
                 {mustVerifyEmail && user.email_verified_at === null && (
                     <div>
                         <p className="text-sm mt-2 text-gray-800 dark:text-gray-200">
@@ -92,6 +87,5 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                     </Transition>
                 </div>
             </form>
-        </section>
     );
 }

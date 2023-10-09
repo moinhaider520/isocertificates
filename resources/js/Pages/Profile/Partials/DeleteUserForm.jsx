@@ -44,30 +44,30 @@ export default function DeleteUserForm({ className = '' }) {
     };
 
     return (
-        <section className={`space-y-6 ${className}`}>
-            <header>
-                <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100">Delete Account</h2>
-
-                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                    Once your account is deleted, all of its resources and data will be permanently deleted. Before
-                    deleting your account, please download any data or information that you wish to retain.
-                </p>
-            </header>
-
-            <DangerButton onClick={confirmUserDeletion}>Delete Account</DangerButton>
-
-            <Modal show={confirmingUserDeletion} onClose={closeModal}>
-                <form onSubmit={deleteUser} className="p-6">
-                    <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100">
-                        Are you sure you want to delete your account?
-                    </h2>
-
-                    <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                        Once your account is deleted, all of its resources and data will be permanently deleted. Please
-                        enter your password to confirm you would like to permanently delete your account.
-                    </p>
-
-                    <div className="mt-6">
+        <>
+            <button
+                      type="button"
+                      className="btn btn-danger js-sweetalert"
+                      data-toggle="modal"
+                      data-target="#deleteaccount"
+                      title="Delete"
+                    >
+                        Delete Account
+                    </button>
+            {/* <Modal show={confirmingUserDeletion} onClose={closeModal}> */}
+            <div className="modal fade" id="deleteaccount" tabIndex={-1} role="dialog">
+            <div className="modal-dialog" role="document">
+            <div className="modal-content">
+      <div className="modal-header">
+        <h6 className="title" id="defaultModalLabel">
+        Are you sure you want to delete your account?
+        </h6>
+      </div>
+      <form onSubmit={deleteUser} className="p-6">
+      <div className="modal-body">
+        <div className="row clearfix">
+                <div className="col-12">
+                    <div className="form-group">
                         <InputLabel htmlFor="password" value="Password" className="sr-only" />
 
                         <TextInput
@@ -77,23 +77,34 @@ export default function DeleteUserForm({ className = '' }) {
                             ref={passwordInput}
                             value={data.password}
                             onChange={(e) => setData('password', e.target.value)}
-                            className="mt-1 block w-3/4"
+                            className="form-control"
                             isFocused
                             placeholder="Password"
                         />
 
                         <InputError message={errors.password} className="mt-2" />
                     </div>
+                </div>
+        </div>
+        </div>
+        <div className="modal-footer">
+        <button type="submit" className="btn btn-primary">
+          Delete User
+        </button>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          data-dismiss="modal"
+        >
+          CLOSE
+        </button>
+      </div>
+        </form>
 
-                    <div className="mt-6 flex justify-end">
-                        <SecondaryButton onClick={closeModal}>Cancel</SecondaryButton>
-
-                        <DangerButton className="ml-3" disabled={processing}>
-                            Delete Account
-                        </DangerButton>
-                    </div>
-                </form>
-            </Modal>
-        </section>
+                </div>
+                </div>
+                </div>
+            {/* </Modal> */}
+        </>
     );
 }
