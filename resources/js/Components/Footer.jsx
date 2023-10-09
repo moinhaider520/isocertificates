@@ -10,8 +10,10 @@ function Footer() {
             '/assets/bundles/libscripts.bundle.js',
             '/assets/bundles/vendorscripts.bundle.js',
             '/assets/vendor/toastr/toastr.js',
+            '/assets/vendor/sweetalert/sweetalert.min.js',
             '/assets/bundles/c3.bundle.js',
             '/assets/bundles/mainscripts.bundle.js',
+            '/assets/js/pages/ui/dialogs.js',
             '/assets/js/index.js'
         ];
 

@@ -47,7 +47,7 @@ export default function ISOCertificates() {
           <div className="form-group">
               <select className="form-control"
               name="isocertificate"
-              onChange={(e) => setData('isocertificate', e.target.value)}
+              onChange={(e) => {setData('isocertificate', e.target.value);setData('eacodes', []);}}
               >
                 <option value="">-- Select ISO Certificate --</option>
                 <option value="ISO 9000">(ISO 9000) - Quality management systems</option>

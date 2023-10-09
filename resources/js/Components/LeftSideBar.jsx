@@ -102,10 +102,10 @@ export default function LeftSideBar() {
                 </a>
                 <ul>
                   <li className="active">
-                    <a href="index.html">Analytical</a>
+                    <Link href={route('dashboard')}>Dashboard</Link>
                   </li>
                   <li>
-                    <a href="h-menu.html">Analytical H-Menu</a>
+                    <Link href={route('hr')}>HR Dashboard</Link>
                   </li>
                   <li>
                     <a href="index9.html">IoT Dashboard</a>
