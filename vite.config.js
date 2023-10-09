@@ -10,8 +10,4 @@ export default defineConfig({
         }),
         react(),
     ],
-    build: {
-        outDir: 'public/dist', // This is where Vite will build your assets
-        assetsDir: 'assets',  // Optional, customize your assets directory
-    },
 });

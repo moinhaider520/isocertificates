@@ -1,92 +1,121 @@
-import { Link } from "@inertiajs/react";
-
-export default function Navbar(){
-    return(
-        <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-brand">
-                <button type="button" class="btn-toggle-offcanvas"><i class="fa fa-bars"></i></button>
-                <button type="button" class="btn-toggle-fullwidth"><i class="fa fa-bars"></i></button>
-                <a href="index.html">ICONIC</a>                
-            </div>
-            
-            <div class="navbar-right">
-                <form id="navbar-search" class="navbar-form search-form">
-                    <input value="" class="form-control" placeholder="Search here..." type="text"/>
-                    <button type="button" class="btn btn-default"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>                
-
-                <div id="navbar-menu">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-                                <i class="fa fa-bell"></i>
-                                <span class="notification-dot"></span>
-                            </a>
-                            <ul class="dropdown-menu notifications">
-                                <li class="header"><strong>You have 4 new Notifications</strong></li>
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <i class="icon-info text-warning"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
-                                                <span class="timestamp">10:00 AM Today</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>                               
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <i class="icon-like text-success"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <p class="text">Your New Campaign <strong>Holiday Sale</strong> is approved.</p>
-                                                <span class="timestamp">11:30 AM Today</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                 <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <i class="icon-pie-chart text-info"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <p class="text">Website visits from Twitter is 27% higher than last week.</p>
-                                                <span class="timestamp">04:00 PM Today</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <i class="icon-info text-danger"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <p class="text">Error on website analytics configurations</p>
-                                                <span class="timestamp">Yesterday</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <Link href={route('/')} class="icon-menu"><i class="fa fa-power-off"></i></Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+export default function NavBar() {
+    <nav className="navbar navbar-fixed-top">
+      <div className="container-fluid">
+        <div className="navbar-brand">
+          <button type="button" className="btn-toggle-offcanvas">
+            <i className="fa fa-bars" />
+          </button>
+          <button type="button" className="btn-toggle-fullwidth">
+            <i className="fa fa-bars" />
+          </button>
+          <a href="index.html">ICONIC</a>
         </div>
+        <div className="navbar-right">
+          <form id="navbar-search" className="navbar-form search-form">
+            <input
+              defaultValue=""
+              className="form-control"
+              placeholder="Search here..."
+              type="text"
+            />
+            <button type="button" className="btn btn-default">
+              <i className="icon-magnifier" />
+            </button>
+          </form>
+          <div id="navbar-menu">
+            <ul className="nav navbar-nav">
+              <li className="dropdown">
+                <a
+                  href="javascript:void(0);"
+                  className="dropdown-toggle icon-menu"
+                  data-toggle="dropdown"
+                >
+                  <i className="fa fa-bell" />
+                  <span className="notification-dot" />
+                </a>
+                <ul className="dropdown-menu notifications">
+                  <li className="header">
+                    <strong>You have 4 new Notifications</strong>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">
+                      <div className="media">
+                        <div className="media-left">
+                          <i className="icon-info text-warning" />
+                        </div>
+                        <div className="media-body">
+                          <p className="text">
+                            Campaign <strong>Holiday Sale</strong> is nearly reach
+                            budget limit.
+                          </p>
+                          <span className="timestamp">10:00 AM Today</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">
+                      <div className="media">
+                        <div className="media-left">
+                          <i className="icon-like text-success" />
+                        </div>
+                        <div className="media-body">
+                          <p className="text">
+                            Your New Campaign <strong>Holiday Sale</strong> is
+                            approved.
+                          </p>
+                          <span className="timestamp">11:30 AM Today</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">
+                      <div className="media">
+                        <div className="media-left">
+                          <i className="icon-pie-chart text-info" />
+                        </div>
+                        <div className="media-body">
+                          <p className="text">
+                            Website visits from Twitter is 27% higher than last
+                            week.
+                          </p>
+                          <span className="timestamp">04:00 PM Today</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">
+                      <div className="media">
+                        <div className="media-left">
+                          <i className="icon-info text-danger" />
+                        </div>
+                        <div className="media-body">
+                          <p className="text">
+                            Error on website analytics configurations
+                          </p>
+                          <span className="timestamp">Yesterday</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li className="footer">
+                    <a href="javascript:void(0);" className="more">
+                      See all notifications
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="page-login.html" className="icon-menu">
+                  <i className="fa fa-power-off" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
-    )
 }
+  
