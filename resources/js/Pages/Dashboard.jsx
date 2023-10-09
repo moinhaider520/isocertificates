@@ -1,4 +1,3 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import AppLayout from '@/Layouts/AppLayout';
 import { Head } from '@inertiajs/react';
 

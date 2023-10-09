@@ -23,8 +23,8 @@ export default function AppLayout({ children }) {
                 </div>
             </div>
             <NavBar />
-            {/* <LeftSideBar />
-            <RightIconBar /> */}
+            <LeftSideBar />
+            <RightIconBar />
             {children}
             
         </div>

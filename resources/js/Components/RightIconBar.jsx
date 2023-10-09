@@ -1,4 +1,7 @@
+import React from "react";
+
 export default function RightIconBar() {
+  return (
     <div className="right_icon_bar">
       <ul>
         <li>
@@ -43,5 +46,5 @@ export default function RightIconBar() {
         </li>
       </ul>
     </div>
+  );
 }
-  

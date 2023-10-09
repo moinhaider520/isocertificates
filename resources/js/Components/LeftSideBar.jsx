@@ -1,4 +1,7 @@
+import React from "react";
+
 export default function LeftSideBar() {
+  return (
 <div id="left-sidebar" className="sidebar">
     <button type="button" className="btn-toggle-offcanvas">
       <i className="fa fa-arrow-left" />
@@ -798,4 +801,5 @@ export default function LeftSideBar() {
       </div>
     </div>
   </div>
+ );
 }
