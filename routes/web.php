@@ -33,6 +33,30 @@ Route::get('/hr', function () {
     return Inertia::render('HR/Contacts');
 })->middleware(['auth', 'verified'])->name('hr');
 
+Route::get('/iso9000', function () {
+    return Inertia::render('ISO9000/index');
+})->middleware(['auth', 'verified'])->name('iso9000');
+
+Route::get('/iso14000', function () {
+    return Inertia::render('ISO14000/index');
+})->middleware(['auth', 'verified'])->name('iso14000');
+
+Route::get('/iso22000', function () {
+    return Inertia::render('ISO22000/index');
+})->middleware(['auth', 'verified'])->name('iso22000');
+
+Route::get('/iso27000', function () {
+    return Inertia::render('ISO27000/index');
+})->middleware(['auth', 'verified'])->name('iso27000');
+
+Route::get('/iso45000', function () {
+    return Inertia::render('ISO45000/index');
+})->middleware(['auth', 'verified'])->name('iso45000');
+
+Route::get('/iso50000', function () {
+    return Inertia::render('ISO50000/index');
+})->middleware(['auth', 'verified'])->name('iso50000');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

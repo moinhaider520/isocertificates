@@ -44,10 +44,10 @@ export default function LeftSideBar() {
             </li>
             <li className="divider" />
             <li>
-              <a href="page-login.html">
+              <Link method="post" href={route('logout')} >
                 <i className="icon-power" />
                 Logout
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -107,7 +107,7 @@ export default function LeftSideBar() {
                   <li>
                     <Link href={route('hr')}>HR Dashboard</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="index9.html">IoT Dashboard</a>
                   </li>
                   <li>
@@ -121,79 +121,118 @@ export default function LeftSideBar() {
                   </li>
                   <li>
                     <a href="index8.html">eCommerce</a>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li>
                 <a href="#App" className="has-arrow">
                   <i className="fa fa-th-large" />
-                  <span>Ready App</span>
+                  <span>ISO - 9000</span>
                 </a>
                 <ul>
                   <li>
-                    <a href="app-inbox.html">Inbox</a>
+                    <Link href={route('iso9000')}>Forms</Link>
                   </li>
                   <li>
-                    <a href="app-chat.html">Chat</a>
+                    <a href="app-chat.html">Details</a>
                   </li>
                   <li>
-                    <a href="app-calendar.html">Calendar</a>
-                  </li>
-                  <li>
-                    <a href="app-contact.html">Contact list</a>
-                  </li>
-                  <li>
-                    <a href="app-contact-grid.html">
-                      Contact Card{" "}
-                      <span className="badge badge-warning float-right">
-                        New
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="app-taskboard.html">Taskboard</a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);">
-                      <span>Blog</span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="blog-dashboard.html">Dashboard</a>
-                      </li>
-                      <li>
-                        <a href="blog-post.html">New Post</a>
-                      </li>
-                      <li>
-                        <a href="blog-list.html">Blog List</a>
-                      </li>
-                      <li>
-                        <a href="blog-details.html">Blog Detail</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);">
-                      <span>File Manager</span>
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="file-dashboard.html">Dashboard</a>
-                      </li>
-                      <li>
-                        <a href="file-documents.html">Documents</a>
-                      </li>
-                      <li>
-                        <a href="file-media.html">Media</a>
-                      </li>
-                      <li>
-                        <a href="file-images.html">Images</a>
-                      </li>
-                    </ul>
+                    <a href="app-calendar.html">Auditing</a>
                   </li>
                 </ul>
               </li>
+
               <li>
+                <a href="#App" className="has-arrow">
+                  <i className="fa fa-th-large" />
+                  <span>ISO - 22000</span>
+                </a>
+                <ul>
+                  <li>
+                    <Link href={route('iso22000')}>Forms</Link>
+                  </li>
+                  <li>
+                    <a href="app-chat.html">Details</a>
+                  </li>
+                  <li>
+                    <a href="app-calendar.html">Auditing</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#App" className="has-arrow">
+                  <i className="fa fa-th-large" />
+                  <span>ISO - 14000</span>
+                </a>
+                <ul>
+                  <li>
+                    <Link href={route('iso14000')}>Forms</Link>
+                  </li>
+                  <li>
+                    <a href="app-chat.html">Details</a>
+                  </li>
+                  <li>
+                    <a href="app-calendar.html">Auditing</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#App" className="has-arrow">
+                  <i className="fa fa-th-large" />
+                  <span>ISO - 27000</span>
+                </a>
+                <ul>
+                  <li>
+                    <Link href={route('iso27000')}>Forms</Link>
+                  </li>
+                  <li>
+                    <a href="app-chat.html">Details</a>
+                  </li>
+                  <li>
+                    <a href="app-calendar.html">Auditing</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#App" className="has-arrow">
+                  <i className="fa fa-th-large" />
+                  <span>ISO - 45000</span>
+                </a>
+                <ul>
+                  <li>
+                    <Link href={route('iso45000')}>Forms</Link>
+                  </li>
+                  <li>
+                    <a href="app-chat.html">Details</a>
+                  </li>
+                  <li>
+                    <a href="app-calendar.html">Auditing</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#App" className="has-arrow">
+                  <i className="fa fa-th-large" />
+                  <span>ISO - 50000</span>
+                </a>
+                <ul>
+                <li>
+                    <Link href={route('iso50000')}>Forms</Link>
+                  </li>
+                  <li>
+                    <a href="app-chat.html">Details</a>
+                  </li>
+                  <li>
+                    <a href="app-calendar.html">Auditing</a>
+                  </li>
+                </ul>
+              </li>
+
+              {/* <li>
                 <a href="#Widgets" className="has-arrow">
                   <i className="fa fa-puzzle-piece" />
                   <span>Widgets</span>
@@ -500,8 +539,8 @@ export default function LeftSideBar() {
                     <a href="page-faq.html">FAQ</a>
                   </li>
                 </ul>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="#Maps" className="has-arrow">
                   <i className="fa fa-map" />
                   <span>Maps</span>
@@ -517,7 +556,7 @@ export default function LeftSideBar() {
                     <a href="map-jvectormap.html">jVector Map</a>
                   </li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>
@@ -735,16 +774,6 @@ export default function LeftSideBar() {
               </label>
             </li>
           </ul>
-          <a href="#" target="_blank" className="btn btn-block btn-primary">
-            Buy this item
-          </a>
-          <a
-            href="https://themeforest.net/user/wrraptheme/portfolio"
-            target="_blank"
-            className="btn btn-block btn-secondary"
-          >
-            View portfolio
-          </a>
         </div>
         <div className="tab-pane" id="question">
           <form>
